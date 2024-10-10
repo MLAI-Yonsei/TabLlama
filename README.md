@@ -64,7 +64,3 @@ Autoregressive Inference 결과와 Intent 별 성능을 확인할려면 다음 i
 데이터 생성을 원한다면 다음 코드를 실행하면 됩니다.
 `/home/emforce77/src/scenario_generation.ipynb`
 
-
-## 문의
-
-프로젝트 관련 문의 사항이나 이슈를 보고할 이메일 주소나 연락처 정보를 작성하세요.
