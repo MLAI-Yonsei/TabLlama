@@ -41,7 +41,7 @@ python main.py --config ./configs/testswap/config_testswap.yaml
 python main.py --config ./configs/indist_testswap/config_indist_testswap.yaml
 ```
 
-### Autoregressive Inference with 4 initial sequences
+### Autoregressive Inference with 1,2,3,4 initial sequences
 
 ```bash
 bash infers.sh
