@@ -59,8 +59,8 @@ bash intent_result.sh
 ## 추가 정보
 
 Autoregressive Inference 결과와 Intent 별 성능을 확인할려면 다음 ipynb 파일을 실행하면 됩니다.
-`/home/emforce77/src/plot.ipynb`
+`./src/plot.ipynb`
 
 데이터 생성을 원한다면 다음 코드를 실행하면 됩니다.
-`/home/emforce77/src/scenario_generation.ipynb`
+`./src/scenario_generation.ipynb`
 
