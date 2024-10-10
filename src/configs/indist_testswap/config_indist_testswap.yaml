@@ -1,0 +1,35 @@
+model_type: "tabllama"
+hidden_size: 8
+num_layers: 2
+num_heads: 2
+num_epochs: 300
+learning_rate: 0.0008378921100564753
+file_path: "./multiple_scenario_data_fin2.xml"
+batch_size: 32
+col_dim: 5
+use_augment_warp: true
+use_random_noise: true
+use_augment_swap: true
+seed: 0
+patience: 15
+min_delta: 0.001
+debug: false
+train: false
+infer: false
+in_dist: true
+test_swap: true
+init_seq: 20
+device: "cuda"
+test: true
+warp_limit: 20
+load_path: "./configs/indist_testswap/indist_testswap_best_model.pth"
+save_path: "./configs/indist_testswap/indist_testswap_best_model.pth"
+seq_num_layers: 1
+seq_num_heads: 1
+intermediate_size: 2400
+swap_prob: 0.19004062006991349
+noise_std: 0.02603802517359663
+
+
+
+

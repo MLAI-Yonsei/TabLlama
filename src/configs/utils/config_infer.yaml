@@ -1,0 +1,25 @@
+model_type: "tabgpt2"
+hidden_size: 4
+num_layers: 2
+num_heads: 4
+num_epochs: 300
+learning_rate: 0.0001
+file_path: "./multiple_scenario_data_infer.xml"
+batch_size: 32
+col_dim: 5
+use_augment_warp: true
+use_random_noise: true
+use_augment_swap: true
+seed: 0
+patience: 20
+min_delta: 0.001
+debug: false
+train: false
+infer: true
+in_dist: False
+test_swap: False
+init_seq: 4
+device: "cuda"
+test: false
+load_path: "./training_results/tabgpt2_best_model.pth"
+

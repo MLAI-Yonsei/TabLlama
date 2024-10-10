@@ -1,0 +1,13 @@
+args.seed :  0
+args.device :  cuda:0
+args.train:  True
+args.infer:  False
+args.file_path:  /home/emforce77/TabFormer-main/modular_regression/multiple_scenario_data_fin2.xml
+Data dimension: 300, Max sequence length: 30, num_intent : 7
+Data Split Over
+expanded_train_data_num 9663
+expanded_val_data_num 2040
+expanded_test_data_num 2050
+col_dim 5 region_len 60 sequence_len 30 num_classes 445
+Filtered data count: 111
+train_loader

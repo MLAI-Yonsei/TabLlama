@@ -1,0 +1,59 @@
+args.seed :  0
+args.device :  cuda:3
+args.train:  True
+args.infer:  False
+args.file_path:  /home/emforce77/TabFormer-main/modular_regression/multiple_scenario_data_fin2.xml
+Data dimension: 300, Max sequence length: 30, num_intent : 7
+expanded_train_data_num 9663
+expanded_val_data_num 2040
+expanded_test_data_num 2050
+Data Split Over
+col_dim 5 region_len 60 sequence_len 30 num_classes 445
+Filtered data count: 111
+train_loader
+create_model
+The model has 27,761,999 trainable parameters
+trainer
+Epoch [1/300], Loss: 342.3654, Val Loss: 257.6028, MAE: 6.7972, RMSE: 16.0494, Non-zero MAE: 21.8961, Non-zero RMSE: 33.6538, Sequence Accuracy: 0.5198, Non-zero Accuracy: 0.0169, Intent Accuracy: 0.8466
+Epoch [2/300], Loss: 234.6436, Val Loss: 200.2765, MAE: 6.1117, RMSE: 14.1517, Non-zero MAE: 20.2955, Non-zero RMSE: 29.4945, Sequence Accuracy: 0.5403, Non-zero Accuracy: 0.0131, Intent Accuracy: 0.8564
+Epoch [3/300], Loss: 196.8670, Val Loss: 186.7411, MAE: 5.9106, RMSE: 13.6646, Non-zero MAE: 20.0728, Non-zero RMSE: 28.5770, Sequence Accuracy: 0.5290, Non-zero Accuracy: 0.0105, Intent Accuracy: 0.8525
+Epoch [4/300], Loss: 189.5193, Val Loss: 183.7261, MAE: 5.8571, RMSE: 13.5541, Non-zero MAE: 20.0179, Non-zero RMSE: 28.4233, Sequence Accuracy: 0.5265, Non-zero Accuracy: 0.0098, Intent Accuracy: 0.8828
+Epoch [5/300], Loss: 187.8907, Val Loss: 184.1276, MAE: 5.9436, RMSE: 13.5684, Non-zero MAE: 19.9239, Non-zero RMSE: 28.3780, Sequence Accuracy: 0.5074, Non-zero Accuracy: 0.0115, Intent Accuracy: 0.8809
+Epoch [6/300], Loss: 186.1195, Val Loss: 182.3079, MAE: 5.9553, RMSE: 13.5022, Non-zero MAE: 19.6378, Non-zero RMSE: 28.0274, Sequence Accuracy: 0.5161, Non-zero Accuracy: 0.0109, Intent Accuracy: 0.8833
+Epoch [7/300], Loss: 185.3376, Val Loss: 182.3263, MAE: 5.9100, RMSE: 13.5024, Non-zero MAE: 19.8008, Non-zero RMSE: 28.1374, Sequence Accuracy: 0.5031, Non-zero Accuracy: 0.0101, Intent Accuracy: 0.8647
+Epoch [8/300], Loss: 184.8326, Val Loss: 182.9827, MAE: 6.0302, RMSE: 13.5263, Non-zero MAE: 19.5828, Non-zero RMSE: 27.9997, Sequence Accuracy: 0.4834, Non-zero Accuracy: 0.0112, Intent Accuracy: 0.8505
+Epoch [9/300], Loss: 184.8200, Val Loss: 182.5284, MAE: 5.9572, RMSE: 13.5105, Non-zero MAE: 19.6201, Non-zero RMSE: 28.0451, Sequence Accuracy: 0.5179, Non-zero Accuracy: 0.0113, Intent Accuracy: 0.8642
+Epoch [10/300], Loss: 182.7042, Val Loss: 179.9045, MAE: 6.0292, RMSE: 13.4128, Non-zero MAE: 19.4235, Non-zero RMSE: 27.7608, Sequence Accuracy: 0.4787, Non-zero Accuracy: 0.0108, Intent Accuracy: 0.8515
+Epoch [11/300], Loss: 181.7445, Val Loss: 180.6328, MAE: 5.9773, RMSE: 13.4385, Non-zero MAE: 19.3738, Non-zero RMSE: 27.7959, Sequence Accuracy: 0.4896, Non-zero Accuracy: 0.0109, Intent Accuracy: 0.8510
+Epoch [12/300], Loss: 182.0526, Val Loss: 180.4877, MAE: 6.0226, RMSE: 13.4332, Non-zero MAE: 19.3517, Non-zero RMSE: 27.7078, Sequence Accuracy: 0.4883, Non-zero Accuracy: 0.0116, Intent Accuracy: 0.8569
+Epoch [13/300], Loss: 181.8299, Val Loss: 179.9232, MAE: 5.9573, RMSE: 13.4138, Non-zero MAE: 19.4130, Non-zero RMSE: 27.7883, Sequence Accuracy: 0.4978, Non-zero Accuracy: 0.0114, Intent Accuracy: 0.8510
+Epoch [14/300], Loss: 181.3208, Val Loss: 179.1762, MAE: 5.9321, RMSE: 13.3849, Non-zero MAE: 19.4058, Non-zero RMSE: 27.7645, Sequence Accuracy: 0.5019, Non-zero Accuracy: 0.0112, Intent Accuracy: 0.8520
+Epoch [15/300], Loss: 181.6766, Val Loss: 180.7844, MAE: 5.9776, RMSE: 13.4444, Non-zero MAE: 19.4994, Non-zero RMSE: 27.8542, Sequence Accuracy: 0.4845, Non-zero Accuracy: 0.0113, Intent Accuracy: 0.8623
+Epoch [16/300], Loss: 181.2981, Val Loss: 180.8611, MAE: 5.9173, RMSE: 13.4475, Non-zero MAE: 19.5043, Non-zero RMSE: 27.9220, Sequence Accuracy: 0.4982, Non-zero Accuracy: 0.0114, Intent Accuracy: 0.8564
+Epoch [17/300], Loss: 180.7167, Val Loss: 178.5171, MAE: 5.9687, RMSE: 13.3595, Non-zero MAE: 19.2589, Non-zero RMSE: 27.6160, Sequence Accuracy: 0.4805, Non-zero Accuracy: 0.0114, Intent Accuracy: 0.8525
+Epoch [18/300], Loss: 179.3736, Val Loss: 180.0762, MAE: 6.0215, RMSE: 13.4183, Non-zero MAE: 19.2861, Non-zero RMSE: 27.6738, Sequence Accuracy: 0.4814, Non-zero Accuracy: 0.0111, Intent Accuracy: 0.8505
+Epoch [19/300], Loss: 179.6111, Val Loss: 179.0227, MAE: 6.0042, RMSE: 13.3786, Non-zero MAE: 19.3123, Non-zero RMSE: 27.6322, Sequence Accuracy: 0.4813, Non-zero Accuracy: 0.0113, Intent Accuracy: 0.8588
+Epoch [20/300], Loss: 180.1132, Val Loss: 178.0008, MAE: 5.9581, RMSE: 13.3399, Non-zero MAE: 19.3764, Non-zero RMSE: 27.6409, Sequence Accuracy: 0.4751, Non-zero Accuracy: 0.0105, Intent Accuracy: 0.8520
+Epoch [21/300], Loss: 179.2523, Val Loss: 179.6538, MAE: 5.9384, RMSE: 13.4030, Non-zero MAE: 19.3546, Non-zero RMSE: 27.7760, Sequence Accuracy: 0.5003, Non-zero Accuracy: 0.0113, Intent Accuracy: 0.8574
+Epoch [22/300], Loss: 179.4582, Val Loss: 179.9184, MAE: 6.0451, RMSE: 13.4118, Non-zero MAE: 19.3264, Non-zero RMSE: 27.7021, Sequence Accuracy: 0.4621, Non-zero Accuracy: 0.0125, Intent Accuracy: 0.8520
+Epoch [23/300], Loss: 179.9344, Val Loss: 180.1908, MAE: 6.0218, RMSE: 13.4221, Non-zero MAE: 19.2551, Non-zero RMSE: 27.6841, Sequence Accuracy: 0.4834, Non-zero Accuracy: 0.0121, Intent Accuracy: 0.8554
+Epoch [24/300], Loss: 179.0428, Val Loss: 178.6499, MAE: 5.9540, RMSE: 13.3648, Non-zero MAE: 19.3416, Non-zero RMSE: 27.6894, Sequence Accuracy: 0.4745, Non-zero Accuracy: 0.0113, Intent Accuracy: 0.8525
+Epoch [25/300], Loss: 179.7303, Val Loss: 180.1071, MAE: 6.0324, RMSE: 13.4193, Non-zero MAE: 19.2764, Non-zero RMSE: 27.6726, Sequence Accuracy: 0.4730, Non-zero Accuracy: 0.0110, Intent Accuracy: 0.8515
+Epoch [26/300], Loss: 178.8263, Val Loss: 178.6590, MAE: 5.9952, RMSE: 13.3653, Non-zero MAE: 19.2883, Non-zero RMSE: 27.6412, Sequence Accuracy: 0.4636, Non-zero Accuracy: 0.0109, Intent Accuracy: 0.8520
+Epoch [27/300], Loss: 179.4632, Val Loss: 183.7547, MAE: 6.1141, RMSE: 13.5548, Non-zero MAE: 19.3042, Non-zero RMSE: 27.8794, Sequence Accuracy: 0.4686, Non-zero Accuracy: 0.0119, Intent Accuracy: 0.8495
+Epoch [28/300], Loss: 178.6614, Val Loss: 179.2574, MAE: 5.9687, RMSE: 13.3875, Non-zero MAE: 19.3344, Non-zero RMSE: 27.7004, Sequence Accuracy: 0.4845, Non-zero Accuracy: 0.0111, Intent Accuracy: 0.8525
+Epoch [29/300], Loss: 178.9863, Val Loss: 180.1013, MAE: 6.0651, RMSE: 13.4187, Non-zero MAE: 19.2743, Non-zero RMSE: 27.6718, Sequence Accuracy: 0.4543, Non-zero Accuracy: 0.0103, Intent Accuracy: 0.8520
+Epoch [30/300], Loss: 178.6709, Val Loss: 181.6983, MAE: 5.9990, RMSE: 13.4784, Non-zero MAE: 19.3598, Non-zero RMSE: 27.8311, Sequence Accuracy: 0.4844, Non-zero Accuracy: 0.0105, Intent Accuracy: 0.8529
+Epoch [31/300], Loss: 178.6763, Val Loss: 180.9253, MAE: 6.0862, RMSE: 13.4504, Non-zero MAE: 19.2184, Non-zero RMSE: 27.6103, Sequence Accuracy: 0.4725, Non-zero Accuracy: 0.0111, Intent Accuracy: 0.8569
+Epoch [32/300], Loss: 178.6685, Val Loss: 180.9090, MAE: 6.0122, RMSE: 13.4496, Non-zero MAE: 19.2955, Non-zero RMSE: 27.7374, Sequence Accuracy: 0.4709, Non-zero Accuracy: 0.0110, Intent Accuracy: 0.8505
+Epoch [33/300], Loss: 178.4839, Val Loss: 178.2795, MAE: 5.9491, RMSE: 13.3502, Non-zero MAE: 19.3107, Non-zero RMSE: 27.6433, Sequence Accuracy: 0.4766, Non-zero Accuracy: 0.0109, Intent Accuracy: 0.8569
+Epoch [34/300], Loss: 179.4687, Val Loss: 179.6666, MAE: 6.0321, RMSE: 13.4042, Non-zero MAE: 19.2088, Non-zero RMSE: 27.5870, Sequence Accuracy: 0.4907, Non-zero Accuracy: 0.0109, Intent Accuracy: 0.8755
+Epoch [35/300], Loss: 178.2210, Val Loss: 179.1943, MAE: 5.9905, RMSE: 13.3851, Non-zero MAE: 19.2817, Non-zero RMSE: 27.6842, Sequence Accuracy: 0.4760, Non-zero Accuracy: 0.0111, Intent Accuracy: 0.8574
+Epoch [36/300], Loss: 178.5009, Val Loss: 178.9859, MAE: 5.9929, RMSE: 13.3778, Non-zero MAE: 19.3437, Non-zero RMSE: 27.6901, Sequence Accuracy: 0.4605, Non-zero Accuracy: 0.0106, Intent Accuracy: 0.8574
+Epoch [37/300], Loss: 178.2314, Val Loss: 179.6808, MAE: 5.9898, RMSE: 13.4043, Non-zero MAE: 19.2707, Non-zero RMSE: 27.6395, Sequence Accuracy: 0.4963, Non-zero Accuracy: 0.0108, Intent Accuracy: 0.8574
+Epoch [38/300], Loss: 177.7371, Val Loss: 179.5880, MAE: 6.0763, RMSE: 13.3999, Non-zero MAE: 19.2485, Non-zero RMSE: 27.6127, Sequence Accuracy: 0.4509, Non-zero Accuracy: 0.0111, Intent Accuracy: 0.8569
+Epoch [39/300], Loss: 178.6664, Val Loss: 180.1042, MAE: 6.0279, RMSE: 13.4197, Non-zero MAE: 19.1915, Non-zero RMSE: 27.6203, Sequence Accuracy: 0.4905, Non-zero Accuracy: 0.0116, Intent Accuracy: 0.8569
+Epoch [40/300], Loss: 177.6808, Val Loss: 181.4444, MAE: 6.0646, RMSE: 13.4700, Non-zero MAE: 19.1788, Non-zero RMSE: 27.6908, Sequence Accuracy: 0.4899, Non-zero Accuracy: 0.0116, Intent Accuracy: 0.8574
+Early stopping triggered at epoch 40
+Best model saved as './training_results_final2/tabbert_best_model.pth'
+Test Results - Loss: 193.0052, MAE: 6.0927, RMSE: 13.7461, Non-zero MAE: 19.8213, Non-zero RMSE: 28.6589, Sequence Accuracy: 0.4988, Non-zero Accuracy: 0.0113, Intent Accuracy: 0.8327
