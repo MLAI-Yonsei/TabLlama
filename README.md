@@ -15,12 +15,13 @@ pip install -r requirements.txt
 
 
 
-새로 학습을 진행하고 싶다면, 필요한 설정을 `.yaml` 파일에서 직접 수정하면 됩니다.
+새로 학습을 진행하고 싶다면, 각 task별 config '.yaml` 파일에서 train: True 로 설정하시면 됩니다.
+기타 하이퍼파라미터 역시 수정가능합니다.
 
 ### Out-Sequence Task
 
 ```bash
-python main.py --config ./configs/default/config\_default.yaml이
+python main.py --config ./configs/default/config\_default.yaml
 ```
 
 ### In-Sequence Task
