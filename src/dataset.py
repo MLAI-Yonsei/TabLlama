@@ -30,8 +30,8 @@ class MissileDataset(Dataset):
 class MissileInferDataset(Dataset):
     def __init__(self, args: Any, processed_data: List[Dict[str, Any]], transform: Optional[List[Any]] = None):
         self.transform = transform
-        self.filtered_data = [item for item in processed_data if item["padding_mask"].sum() == args.init_seq]
-        self.filtered_indices = [idx for idx, item in enumerate(processed_data) if item["padding_mask"].sum() == args.init_seq]
+        self.filtered_data = [item for item in processed_data if item["padding_mask"].sum() == 0]
+        self.filtered_indices = [idx for idx, item in enumerate(processed_data) if item["padding_mask"].sum() == 0]
 
     def __len__(self) -> int:
         return len(self.filtered_data)
