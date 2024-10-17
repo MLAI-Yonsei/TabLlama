@@ -87,7 +87,7 @@ def run_inference_bert(
     model.load_state_dict(torch.load(model_path))
     model.to(device)
     model.eval()
-
+    
     all_predictions = []
     all_true_values = []
     all_intent_predictions = []
@@ -104,9 +104,11 @@ def run_inference_bert(
         for batch in inference_dataloader:
             inputs, targets, masks = [b.to(device) for b in (batch["data"], batch["intent_label"], batch["padding_mask"])]
             batch_size, _, feature_dim = inputs.shape
+                        
             
-            current_sequence = inputs[:, :initial_sequence_len+1, :]
-            current_mask = masks[:, :initial_sequence_len+1]
+            current_sequence = inputs[:, :initial_sequence_len, :]
+            current_mask = masks[:, :initial_sequence_len]
+            
             
             predictions = []
 
@@ -125,8 +127,8 @@ def run_inference_bert(
                 sequence_wise_intent_predictions[i - initial_sequence_len].extend(intent_pred.cpu().numpy())
                 sequence_wise_true_intents[i - initial_sequence_len].extend(targets.cpu().numpy())
 
-                current_sequence = torch.cat([current_sequence[:, 1:, :], last_prediction.float()], dim=1)
-                current_mask = torch.cat([current_mask[:, 1:], torch.ones((batch_size, 1), device=device)], dim=1)
+                current_sequence = torch.cat([current_sequence[:, :, :], last_prediction.float()], dim=1)
+                current_mask = torch.cat([current_mask[:, :], torch.zeros((batch_size, 1), device=device)], dim=1)
 
             all_predictions.extend(torch.cat(predictions, dim=1).cpu().numpy())
             all_true_values.extend(inputs[:, initial_sequence_len:, :].cpu().numpy())
