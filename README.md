@@ -11,7 +11,7 @@ Python==3.8.0
 pip install -r requirements.txt
 ```
 
-새로 학습을 진행하고 싶다면, 각 task별 config '.yaml` 파일에서 train: True 로 설정하시면 됩니다. 기타 하이퍼파라미터 역시 수정가능합니다.
+If you want to train new model, you can set train: True in the config ‘.yaml’ file for each task. Other hyperparameters can also be modified.
 
 ### Out-Sequence Task
 
@@ -53,7 +53,7 @@ bash intent_result.sh
 
 The configuration file (`config.yaml`) defines the settings for training and evaluating the model. Below is a detailed explanation of each parameter:
 
-- **model\_type**: Specifies the type of model to use. Options include `lstm`, `rnn`, `vanillatf`, `tabbert`, `tabgpt2`, `tabllama`. The default is `tabllama`.
+- **model\_type**: Specifies the type of model to use. Options include `lstm`, `rnn`, `vanillatf`, `tabbert`, `tabgpt2`, `tabllama`. The default is `vanillatf`.
 - **hidden\_size**: The size of the hidden layers. Default is `4`.
 - **num\_layers**: The number of layers in the model. Default is `2`.
 - **seq\_num\_layers**: Number of layers in the sequential modeling component. Default is `2`.
@@ -93,7 +93,7 @@ The configuration file (`config.yaml`) defines the settings for training and eva
 To generate scenario data using the script `scenario_generator.py`, you can run the script with the following command:
 
 ```bash
-python scenario_generator.py --time_start 10 --time_end 30 --time_step 10 --n_repeat 2 --scenarios_per_combination 50 --poisson_model exponential --poisson_start 40 --poisson_end 5 --output_file ./output.xml --verbose
+python scenario_generator.py --time_start 10 --time_end 30 --time_step 1 --n_repeat 200 --scenarios_per_combination 5 --poisson_model exponential --poisson_start 30 --poisson_end 10 --output_file ./xml_testdata.xml --verbose
 ```
 
 This command runs the scenario generator with specific arguments:
@@ -124,13 +124,11 @@ Using `argparse` makes the script flexible and easy to use, as users can specify
 
 ## Analaysis files
 
-Autoregressive Inference 결과와 Intent 별 성능을 확인하려면 다음 Jupyter 노트북 파일을 실행하면 됩니다:
+To see the results of Autoregressive Inference and its performance by Intent, you can run the following Jupyter notebook file:
 
-- **Plotting Inference Results**: `./src/plot.ipynb` jupyter notebook파일을 전체 실행하여 모델의 Autoregressive Inference 결과와 각 Intent별 성능을 시각적으로 확인할 수 있습니다.
+- **Plotting Inference Results**: `./src/plot.ipynb` You can run the jupyter notebook file in full to visually see the results of the model's Autoregressive Inference and the performance for each Intent..
 
-데이터 생성을 원한다면 다음 Jupyter 노트북 파일을 실행하면 됩니다:
-
-- **Scenario Data Generation**: `./src/scenario_generation.ipynb` jupyter notebook 파일을 전체 실행하여 시나리오 데이터의 통계량을 확인할 수 있습니다.
+- **Scenario Data Generation**: `./src/scenario_generation.ipynb` You can run the jupyter notebook file in full to see the statistics of the scenario data.
 
 
 ## Source Code Structure and Description
@@ -154,19 +152,10 @@ Below is a description of the files and directories in the `src` folder:
 #### Jupyter Notebooks (`.ipynb`)
 
 - **`plot.ipynb`**: Jupyter notebook for visualizing model performance and inference results, helping to understand how well the model is performing across different metrics.
-- **`scenario_generation.ipynb`**: Jupyter notebook used to generate synthetic scenario data for training and testing the model.
+- **`scenario_generation.ipynb`**: Jupyter notebook used to analyse synthetic scenario data for training and testing the model.
 
 #### Shell Scripts (`.sh`)
 
 - **`infers.sh`**: Shell script used to run inference tasks in batch mode.
 - **`intent_result.sh`**: Shell script for generating intent-wise evaluation results after model inference.
-
-#### Text Files (`.txt`)
-
-- **`requirements.txt`**: Text file specifying all the dependencies needed to run the project, which can be installed using pip.
-
-#### Data Files
-
-- **`multiple_scenario_data_fin2.xml`**: XML data file containing finalized scenario information used for model training.
-- **`multiple_scenario_data_infer.xml`**: XML data file for running inference tasks on multiple scenarios.
 
