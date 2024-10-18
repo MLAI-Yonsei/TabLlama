@@ -19,7 +19,7 @@ os.environ['CUDA_LAUNCH_BLOCKING'] = "1"
 
 # 설정 스키마 정의
 CONFIG_SCHEMA = {
-    "model_type": {"type": str, "default": "vanillatf", "choices": ["lstm", "rnn", "vanillatf", "tabbert", "tabgpt2", "tabllama"]},
+    "model_type": {"type": str, "default": "tabllama", "choices": ["lstm", "rnn", "vanillatf", "tabbert", "tabgpt2", "tabllama"]},
     "hidden_size": {"type": int, "default": 4},
     "num_layers": {"type": int, "default": 2},
     "seq_num_layers": {"type": int, "default": 2},
