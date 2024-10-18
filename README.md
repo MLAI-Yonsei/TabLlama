@@ -53,7 +53,7 @@ bash intent_result.sh
 
 The configuration file (`config.yaml`) defines the settings for training and evaluating the model. Below is a detailed explanation of each parameter:
 
-- **model\_type**: Specifies the type of model to use. Options include `lstm`, `rnn`, `vanillatf`, `tabbert`, `tabgpt2`, `tabllama`. The default is `vanillatf`.
+- **model\_type**: Specifies the type of model to use. Options include `lstm`, `rnn`, `vanillatf`, `tabbert`, `tabgpt2`, `tabllama`. The default is `tabllama`.
 - **hidden\_size**: The size of the hidden layers. Default is `4`.
 - **num\_layers**: The number of layers in the model. Default is `2`.
 - **seq\_num\_layers**: Number of layers in the sequential modeling component. Default is `2`.
