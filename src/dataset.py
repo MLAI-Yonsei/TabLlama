@@ -3,7 +3,7 @@ from torch.utils.data import Dataset
 import random
 from typing import List, Dict, Any, Tuple, Optional
 
-class MissileDataset(Dataset):
+class VehicleDataset(Dataset):
     def __init__(self, processed_data: List[Dict[str, Any]], transform: Optional[List[Any]] = None):
         self.data = processed_data
         self.transform = transform
@@ -27,7 +27,7 @@ class MissileDataset(Dataset):
             "intent": item["intent"],
         }
 
-class MissileInferDataset(Dataset):
+class VehicleInferDataset(Dataset):
     def __init__(self, args: Any, processed_data: List[Dict[str, Any]], transform: Optional[List[Any]] = None):
         self.transform = transform
         self.filtered_data = [item for item in processed_data if item["padding_mask"].sum() == 0]
