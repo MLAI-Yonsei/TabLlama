@@ -6,7 +6,7 @@ from torch.utils.data import DataLoader
 
 from utils import set_seed, run_inference_bert
 from data_processor import DataPreprocessor
-from dataset import MissileDataset, AddGaussianNoise, AugmentWarp, SwapAugment, MissileInferDataset
+from dataset import VehicleDataset, AddGaussianNoise, AugmentWarp, SwapAugment, VehicleInferDataset
 from trainer import Trainer
 from models.tabbert import HierarchicalTransformer
 from models.lstmrnn import SimplifiedLSTMRNN
@@ -55,7 +55,7 @@ CONFIG_SCHEMA = {
 
 def parse_args():
     """설정 파일과 명령줄 인자를 파싱하여 실행 설정을 생성합니다."""
-    parser = argparse.ArgumentParser(description="Missile Data Training Script")
+    parser = argparse.ArgumentParser(description="Vehicle Data Training Script")
     parser.add_argument("--config", type=str, default="config.yaml", help="Path to YAML config file")
     
     for key, value in CONFIG_SCHEMA.items():
@@ -92,10 +92,10 @@ def create_dataloaders(args, train_data, val_data, test_data, max_value):
     if args.use_augment_swap:
         transforms.append(SwapAugment(swap_prob=args.swap_prob))
 
-    train_dataset = MissileDataset(train_data, transform=transforms)
-    val_dataset = MissileDataset(val_data)
-    test_dataset = MissileDataset(test_data, transform=[SwapAugment(swap_prob=0.1)] if args.test_swap else None)
-    infer_dataset = MissileInferDataset(args, test_data)
+    train_dataset = VehicleDataset(train_data, transform=transforms)
+    val_dataset = VehicleDataset(val_data)
+    test_dataset = VehicleDataset(test_data, transform=[SwapAugment(swap_prob=0.1)] if args.test_swap else None)
+    infer_dataset = VehicleInferDataset(args, test_data)
 
     train_loader = DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True)
     val_loader = DataLoader(val_dataset, batch_size=args.batch_size, shuffle=False)
